@@ -18,10 +18,14 @@ class Song
     end
   end
 
-  def self.sort 
+  def self.sort
     @@all.sort do |song1, song2|
       song1.name <=> song2.name
     end
+  end
+
+  def description
+    "#{self.artist} - #{self.name} - #{self.genre}"
   end
 
   def artist
