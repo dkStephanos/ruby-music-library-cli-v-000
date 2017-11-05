@@ -67,7 +67,7 @@ class Song
   def self.new_from_filename(file_name)
     @data = file_name.rpartition(".")
     @data = @data[0].split(" - ")
-    Song.find_or_create_by_name(@data[1]).tap do |song|
+    self.find_or_create_by_name(@data[1]).tap do |song|
       song.artist = Artist.find_or_create_by_name(@data[0])
       song.artist.add_song(song)
       song.genre = Genre.find_or_create_by_name(@data[2])
