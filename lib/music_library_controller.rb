@@ -19,7 +19,7 @@ class MusicLibraryController
     puts("To play a song, enter 'play song'.")
     puts("To quit, type 'exit'.")
     puts("What would you like to do?")
-    input = gets
+    input = gets.chomp
     while input != "exit"
       puts("Welcome to your music library!")
       puts("To list all of your songs, enter 'list songs'.")
@@ -33,7 +33,6 @@ class MusicLibraryController
       input = gets.chomp
       case input
       when "list songs"
-        binding.pry
         list_songs
       when "list artists"
         list_artists
