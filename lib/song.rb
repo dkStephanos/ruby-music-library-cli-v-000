@@ -19,7 +19,7 @@ class Song
   end
 
   def self.sort
-    @@all.sort_by {|obj| obj.attribute}
+    @@all.sort_by {|obj| obj.name}
   end
 
   def description
