@@ -83,8 +83,9 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     song_number = gets
     song_number = song_number.to_i
+    Song.all.sort! {|song1, song2| song1.name <=> song2.name}
     if song_number > 0 && song_number < Song.all.count
-
+      puts "Playing #{Song.all[song_number - 1].name} by #{Song.all[song_number - 1].artist_name}"
     end
   end
 
