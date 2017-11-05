@@ -32,6 +32,7 @@ class MusicLibraryController
       puts("What would you like to do?")
       input = gets
       list_songs
+      list_artists
       case input
       when "list songs"
         list_songs
