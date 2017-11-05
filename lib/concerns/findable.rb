@@ -1,6 +1,6 @@
 module Concerns::Findable
 
-  def find_by_name(name)
+  def self.find_by_name(name)
     self.all.each do |instance|
       if instance.name == name
         return instance
