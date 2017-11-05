@@ -49,9 +49,6 @@ class MusicLibraryController
       else
         "continue"
       end
-        
-        
-      end
     end
   end
 
