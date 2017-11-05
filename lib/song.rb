@@ -62,13 +62,7 @@ class Song
     nil
   end
 
-  def self.find_or_create_by_name(name)
-    song = Song.find_by_name(name)
-    if song == nil
-      song = Song.create(name)
-    end
-    song
-  end
+  
 
   def self.new_from_filename(file_name)
     @data = file_name.rpartition(".")
