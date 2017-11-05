@@ -77,7 +77,7 @@ class Song
 
   def self.create_from_filename(file_name)
     new_from_filename(file_name).tap do |song|
-      @@all << song
+      song.save
     end
   end
 end
