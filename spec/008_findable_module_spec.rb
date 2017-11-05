@@ -1,4 +1,5 @@
 require "spec_helper"
+require "pry"
 
 describe "Concerns::Findable" do
   it "defines a module named Concerns::Findable" do
@@ -58,6 +59,7 @@ describe "Concerns::Findable" do
 
       it "invokes .find_by_name instead of re-coding the same functionality" do
         expect(Artist).to receive(:find_by_name)
+        binding.pry
         Artist.find_or_create_by_name("Slowdive")
       end
 
