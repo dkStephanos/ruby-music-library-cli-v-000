@@ -46,16 +46,7 @@ class Artist
     genres
   end
 
-  def self.find_or_create_by_name(name)
-    @@all.each do |artist|
-      if artist.name == name
-        return artist
-      end
-    end
-    artist = Artist.new(name)
-    @@all << artist
-    artist
-  end
+  
 
   def songs
     @songs
