@@ -69,8 +69,7 @@ class Song
   end
 
   def self.create_from_filename(file_name)
-    @data = file_name.rpartition(".")
-    @data = @data[0].split(" - ")
+    @data = file_name.gsub(".mp3", "").split(" - ")
     song = self.find_by_name(@data[0])
     if song != nil
       Song.new_from_filename(file_name)
