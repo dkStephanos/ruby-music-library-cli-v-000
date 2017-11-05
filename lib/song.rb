@@ -1,6 +1,5 @@
 require_relative "concerns/findable.rb"
 
-
 class Song
 
   attr_accessor :name, :artist, :data, :genre
