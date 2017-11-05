@@ -1,4 +1,3 @@
-=begin
 require "spec_helper"
 
 describe "CLI Commands" do
@@ -64,4 +63,3 @@ describe "CLI Commands" do
     end
   end
 end
-=end
