@@ -31,8 +31,8 @@ class MusicLibraryController
       puts("To quit, type 'exit'.")
       puts("What would you like to do?")
       input = gets.chomp
-      binding.pry
       case input
+        binding.pry
       when "list songs"
         list_songs
       when "list artists"
