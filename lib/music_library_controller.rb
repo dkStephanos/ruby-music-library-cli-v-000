@@ -62,7 +62,7 @@ class MusicLibraryController
     if selected_artist
       selected_artist.songs.sort! {|song1, song2| song1.name <=> song2.name}
       selected_artist.songs.each_with_index do |song, index|
-        puts "#{index + 1}. #{song.description}"
+        puts "#{index + 1}. #{song.name} - #{song.genre}"
       end
     end
   end
