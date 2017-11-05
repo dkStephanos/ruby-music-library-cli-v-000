@@ -62,7 +62,7 @@ class Song
     nil
   end
 
-  
+
 
   def self.new_from_filename(file_name)
     @data = file_name.rpartition(".")
