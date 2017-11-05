@@ -25,7 +25,7 @@ class Song
   end
 
   def description
-    "#{self.artist} - #{self.name} - #{self.genre}"
+    "#{self.artist.name} - #{self.name} - #{self.genre.name}"
   end
 
   def artist
