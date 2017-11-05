@@ -1,3 +1,4 @@
+=begin
 require "spec_helper"
 
 describe "MusicLibraryController" do
@@ -64,3 +65,4 @@ describe "MusicLibraryController" do
     end
   end
 end
+=end
