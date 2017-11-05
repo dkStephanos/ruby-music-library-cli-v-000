@@ -54,10 +54,6 @@ class Song
     @@all.clear
   end
 
-
-
-
-
   def self.new_from_filename(file_name)
     data = file_name.gsub(".mp3", "").split(" - ")
     find_or_create_by_name(data[1]).tap do |song|
