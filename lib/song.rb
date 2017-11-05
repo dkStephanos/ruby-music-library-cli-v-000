@@ -70,7 +70,7 @@ class Song
   def self.create_from_filename(file_name)
     @data = file_name.rpartition(".")
     @data = @data[0].split(" - ")
-    song = Song.find_by_name(@data[0])
+    song = self.find_by_name(@data[0])
     if song != nil
       Song.new_from_filename(file_name)
     end
