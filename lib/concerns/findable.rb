@@ -10,7 +10,7 @@ module Concerns::Findable
   end
 
   def find_or_create_by_name(name)
-    found = self.find_by_name(name)
+    found = find_by_name(name)
     found ? found : create(name)
   end
 end
