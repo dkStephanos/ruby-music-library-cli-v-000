@@ -3,7 +3,7 @@ require_relative "concerns/findable.rb"
 class Song
   extend Concerns::Findable
 
-  attr_accessor :name, :artist, :data, :genre
+  attr_accessor :name, :artist, :genre
   @@all = []
 
   def initialize(name, artist = nil, genre = nil)
@@ -59,21 +59,17 @@ class Song
 
 
   def self.new_from_filename(file_name)
-    @data = file_name.rpartition(".")
-    @data = @data[0].split(" - ")
-    find_or_create_by_name(@data[1]).tap do |song|
-      song.artist = Artist.find_or_create_by_name(@data[0])
+    data = file_name.gsub(".mp3", "").split(" - ")
+    find_or_create_by_name(data[1]).tap do |song|
+      song.artist = Artist.find_or_create_by_name(data[0])
       song.artist.add_song(song)
-      song.genre = Genre.find_or_create_by_name(@data[2])
+      song.genre = Genre.find_or_create_by_name(data[2])
     end
   end
 
   def self.create_from_filename(file_name)
-    @data = file_name.gsub(".mp3", "").split(" - ")
-    song = self.find_by_name(@data[0])
-    if song != nil
-      Song.new_from_filename(file_name)
+    new_from_filename(file_name).tap do |song|
+      @@all << song
     end
-    song
   end
 end
