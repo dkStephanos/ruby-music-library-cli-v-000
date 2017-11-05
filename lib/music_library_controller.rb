@@ -63,6 +63,6 @@ class MusicLibraryController
     selected_artist.songs.each_with_index do |song, index|
       puts "#{index + 1}. #{song.description}"
     end
-  end  
+  end
 
 end
