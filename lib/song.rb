@@ -26,6 +26,10 @@ class Song
     "#{self.artist.name} - #{self.name} - #{self.genre.name}"
   end
 
+  def name
+    @name
+  end
+
   def artist
     @artist
   end
