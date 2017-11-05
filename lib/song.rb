@@ -18,6 +18,12 @@ class Song
     end
   end
 
+  def self.sort 
+    @@all.sort do |song1, song2|
+      song1.name <=> song2.name
+    end
+  end
+
   def artist
     @artist
   end
