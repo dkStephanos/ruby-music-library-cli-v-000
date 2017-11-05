@@ -45,5 +45,3 @@ class MusicLibraryController
 
 
 end
-
-list_songs
